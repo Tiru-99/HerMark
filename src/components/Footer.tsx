@@ -1,4 +1,4 @@
-import { Send, MessageCircle } from 'lucide-react'
+import { Send, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -10,7 +10,7 @@ export default function Footer() {
               <div className="w-12 h-12 bg-black rounded-full mr-3"></div>
               <div>
                 <h2 className="text-xl font-bold">HerMark Press</h2>
-                <p className="text-sm">"Making Her Mark in literature"</p>
+                <p className="text-sm">&quot;Making Her Mark in literature&quot;</p> {/* Escaped quotes */}
               </div>
             </div>
           </div>
@@ -51,5 +51,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
