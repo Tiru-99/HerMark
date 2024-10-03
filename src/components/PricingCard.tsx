@@ -1,63 +1,94 @@
-import { Check } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { Check } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 interface PricingCardProps {
-  isPopular?: boolean
+  isPopular?: boolean;
 }
 
 const PricingCard = ({ isPopular = false }: PricingCardProps) => {
   return (
-    <div className={cn(
-      "border rounded-lg p-6 flex flex-col md:max-w-md ",
-      isPopular ? "bg-pink-200 border-pink-300" : "bg-white"
-    )}>
+    <Card className={`overflow-hidden  ${isPopular ? "border-2 border-primary relative" : ""}`}>
       {isPopular && (
-        <div className="text-lg font-semibold mb-2">Popular</div>
+        <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 rotate-45">
+          <Badge variant="default" className="bg-primary text-primary-foreground px-6 py-1">
+            Popular
+          </Badge>
+        </div>
       )}
-      <div className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full w-fit text-sm font-medium mb-4">
-        Silver
-      </div>
-      <div className="text-2xl font-bold mb-4">
-        AED<br /><span className="text-4xl">10,245</span>
-      </div>
-      <ul className="space-y-2 mb-6 flex-grow">
-        <li className="flex items-center">
-          <Check className="mr-2 h-5 w-5 text-green-500" />
-          <span>Access to All Features</span>
-        </li>
-        <li className="flex items-center">
-          <Check className="mr-2 h-5 w-5 text-green-500" />
-          <span>1k lookups / per month</span>
-        </li>
-        <li className="flex items-center">
-          <Check className="mr-2 h-5 w-5 text-green-500" />
-          <span>10 Monitoring Quota</span>
-        </li>
-        <li className="flex items-center">
-          <Check className="mr-2 h-5 w-5 text-green-500" />
-          <span>30K API Credits / month</span>
-        </li>
-      </ul>
-      <button className="w-full bg-yellow-300 hover:bg-yellow-400 text-black font-semibold py-2 px-4 rounded mt-24">
-        Book Now
-      </button>
-    </div>
-  )
-}
+      <CardHeader className="pb-8">
+        <div className="space-y-2">
+          <Badge variant="secondary" className="text-sm font-medium">
+            Silver
+          </Badge>
+          <h3 className="text-2xl font-semibold">Premium Plan</h3>
+        </div>
+        <div className="mt-4 flex flex-col">
+          <span className="text-sm text-muted-foreground">Starting from</span>
+          <div className="flex items-baseline">
+            <span className="text-4xl font-bold">AED</span>
+            <span className="text-6xl font-bold ml-2">10,000</span>
+          </div>
+        </div>
+      </CardHeader>
+      <CardContent className="grid gap-4">
+        <ul className="space-y-4 text-sm">
+          <li className="flex items-center">
+            <div className="bg-primary/10 rounded-full p-1 mr-3">
+              <Check className="h-5 w-5 text-primary" />
+            </div>
+            <span className="font-medium">Access to All Features</span>
+          </li>
+          <li className="flex items-center">
+            <div className="bg-primary/10 rounded-full p-1 mr-3">
+              <Check className="h-5 w-5 text-primary" />
+            </div>
+            <span className="font-medium">1k lookups / per month</span>
+          </li>
+          <li className="flex items-center">
+            <div className="bg-primary/10 rounded-full p-1 mr-3">
+              <Check className="h-5 w-5 text-primary" />
+            </div>
+            <span className="font-medium">10 Monitoring Quota</span>
+          </li>
+          <li className="flex items-center">
+            <div className="bg-primary/10 rounded-full p-1 mr-3">
+              <Check className="h-5 w-5 text-primary" />
+            </div>
+            <span className="font-medium">30K API Credits / month</span>
+          </li>
+        </ul>
+      </CardContent>
+      <CardFooter className="pt-4">
+        <Button 
+          size="lg" 
+          className="w-full text-black bg-yellow-200 hover:bg-yellow-300 h-12 text-lg"
+        >
+          Enquire Now
+        </Button>
+      </CardFooter>
+    </Card>
+  );
+};
 
 export default function Component() {
-    return (
-      <div className="container mx-auto px-4 py-16 md:mt-[500px] mt-1">
-        <h1 className="text-4xl font-bold md:mb-36 mb-12 text-center">Pricing</h1>
-        <div className="flex flex-col md:flex-row items-center md:items-stretch justify-center gap-6 md:gap-12">
-          <PricingCard />
-          <div className="md:-mt-16 mb-16">
-            <PricingCard isPopular />
-          </div>
-          <PricingCard />
+  return (
+    <div className="container mx-auto px-4 py-16 md:mt-96 mt-20">
+      <div className="max-w-md mx-auto">
+        <div className="text-center mb-10 space-y-4">
+          <h2 className="text-4xl font-bold">Simple Pricing</h2>
+          <p className="text-lg text-muted-foreground">
+            Choose the perfect plan for your needs
+          </p>
         </div>
+        <PricingCard isPopular />
       </div>
-    );
-  }
-  
-  
+    </div>
+  );
+}

@@ -1,7 +1,6 @@
 
 import Frontcomp from '@/components/Frontcomp';
 import Form from '@/components/Form';
-
 import Masonry from '@/components/Masonry';
 import PricingCard from '@/components/PricingCard';
 import AboutUs from '@/components/Aboutus';

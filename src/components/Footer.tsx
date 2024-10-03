@@ -5,13 +5,9 @@ export default function Footer() {
     <footer className="bg-white text-black p-8 md:mt-24 mt-12 mx-4 font-sans border-2 border-pink-500">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start mb-8">
-          <div className="mb-6 md:mb-0">
+          <div className="mb-6 md:mb-0 md:mr-12"> {/* Moved mr-12 here */}
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-black rounded-full mr-3"></div>
-              <div>
-                <h2 className="text-xl font-bold">HerMark Press</h2>
-                <p className="text-sm">&quot;Making Her Mark in literature&quot;</p> {/* Escaped quotes */}
-              </div>
+              <img src='/logoblack3.png' className='scale-75' alt="Logo" />
             </div>
           </div>
           <div className="grid grid-cols-2 gap-8 md:gap-16">

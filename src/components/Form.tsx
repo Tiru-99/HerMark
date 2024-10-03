@@ -1,28 +1,48 @@
 "use client"
 
 import { useState } from 'react'
+import axios from 'axios'  // Import Axios
 
+const Loader = () => (
+  <div className="flex justify-center items-center space-x-2">
+    <div className="w-2 h-2 bg-white rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+    <div className="w-2 h-2 bg-white rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+    <div className="w-2 h-2 bg-white rounded-full animate-bounce"></div>
+  </div>
+);
 export default function Form() {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
     phoneNumber: '',
     manuscriptStatus: ''
-  })
+  });
+  
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setFormData(prevData => ({
       ...prevData,
       [name]: value
-    }))
-  }
+    }));
+  };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log('Form submitted:', formData)
-    // Here you would typically send the data to your backend
-  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    setLoading(true);
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+
+    try {
+      const response = await axios.post('/api/email', formData); // Replace with your backend URL
+      console.log('Response:', response.data); // Handle response from the backend
+    } catch (error) {
+      console.error('Error submitting form:', error); // Handle error
+    } finally {
+      setLoading(false); // Ensure loading is set to false regardless of success or failure
+      alert("Your Email is sent successfully")
+    }
+  };
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md">
@@ -96,10 +116,11 @@ export default function Form() {
         <button
           type="submit"
           className="w-full bg-pink-400 text-white font-bold py-2 px-4 rounded hover:bg-pink-500 transition duration-300"
+          disabled={loading} // Disable button while loading
         >
-          Connect Now
+          {loading ? <Loader /> : 'Connect Now'}
         </button>
       </form>
     </div>
-  )
+  );
 }

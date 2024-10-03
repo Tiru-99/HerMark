@@ -8,12 +8,9 @@ export default function AboutUs() {
         <div className="md:w-1/2 text-left">
           <h2 className="text-4xl font-bold pb-6">About Us</h2>
           <p className="text-gray-700 leading-relaxed pb-6 max-w-xl">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+          The stories of women are essential, not just as personal reflections, but as powerful forces that shape society and drive progress. At HerMark Press, we are committed to bringing these stories to the forefront. As a women-only publishing and marketing platform, we offer a bold space where female authors can amplify their voices and make their mark. Our mission is to break barriers, elevate diverse perspectives, and ensure that women’s narratives are not only heard but respected and valued. With a focus on excellence and impact, HerMark Press stands as a driving force in transforming women's stories into lasting contributions to literature and culture.
           </p>
-          <p className="text-gray-700 leading-relaxed max-w-xl">
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.
-          </p>
+        
         </div>
 
         {/* Right Side - Image Section */}
