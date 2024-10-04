@@ -8,7 +8,7 @@ export default function AboutUs() {
         <div className="md:w-1/2 text-left">
           <h2 className="text-4xl font-bold pb-6">About Us</h2>
           <p className="text-gray-700 leading-relaxed pb-6 max-w-xl">
-          The stories of women are essential, not just as personal reflections, but as powerful forces that shape society and drive progress. At HerMark Press, we are committed to bringing these stories to the forefront. As a women-only publishing and marketing platform, we offer a bold space where female authors can amplify their voices and make their mark. Our mission is to break barriers, elevate diverse perspectives, and ensure that women&#39;s narratives are not only heard but respected and valued. With a focus on excellence and impact, HerMark Press stands as a driving force in transforming women&#39;s stories into lasting contributions to literature and culture.
+            The stories of women are essential, not just as personal reflections, but as powerful forces that shape society and drive progress. At HerMark Press, we are committed to bringing these stories to the forefront. As a women-only publishing and marketing platform, we offer a bold space where female authors can amplify their voices and make their mark. Our mission is to break barriers, elevate diverse perspectives, and ensure that women&#39;s narratives are not only heard but respected and valued. With a focus on excellence and impact, HerMark Press stands as a driving force in transforming women&#39;s stories into lasting contributions to literature and culture.
 
           </p>
         

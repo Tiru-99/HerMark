@@ -1,5 +1,6 @@
 "use client";
 import { useState } from 'react';
+import { Link } from 'react-scroll';
 import Image from "next/image";
 
 export default function Frontcomp() {
@@ -20,13 +21,13 @@ export default function Frontcomp() {
           Making <span className={`${isHovered ? 'text-yellow-400' : 'text-white'} transition-all duration-300 ease-in-out`}>Her</span> Mark in <br />Literature
         </div>
 
-        <button
+        <Link to='getstarted' smooth ={true} duration={500}><button
           className="text-white border p-3 mt-6 md:mt-12 border-white text-lg md:text-2xl hover:bg-white hover:text-black transition-all duration-300 ease-in-out"
           onMouseEnter={() => setIsHovered(true)} // Set hovered state to true on mouse enter
           onMouseLeave={() => setIsHovered(false)} // Set hovered state to false on mouse leave
         >
           Get started with publishing
-        </button>
+        </button></Link>
       </div>
     </div>
   );
