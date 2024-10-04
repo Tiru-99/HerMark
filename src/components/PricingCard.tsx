@@ -67,7 +67,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ isPopular = false }) => {
       </CardContent>
       <CardFooter className="pt-4">
         <a
-          href="https://wa.me/+971585605980?text=I%20am%20interested%20in%20the%20Premium%20Plan%20For%20HerMark."
+          href="https://wa.me/919156964130?text=I%20am%20interested%20in%20the%20Premium%20Plan%20For%20HerMark."
           target="_blank"
           rel="noopener noreferrer"
           className="w-full text-black bg-yellow-200 hover:bg-yellow-300 h-12 text-lg flex items-center justify-center"
