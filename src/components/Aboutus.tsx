@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutUs() {
   return (
-    <section className="container mx-auto py-16  ">
+    <section className="container mx-auto py-16 md:mt-96">
       <div className="flex flex-col md:flex-row items-center gap-8 font-serif bg-yellow-50 md:pl-12 p-4 md:py-0 md:px-0">
         {/* Left Side - Text Section */}
         <div className="md:w-1/2 text-left">
