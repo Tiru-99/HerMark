@@ -4,14 +4,14 @@ import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import { useEffect, useState } from "react";
 
 const images = [
-  { src: "/publishing.jpg", alt: "Book Marketing and Publicity" , desc:"" },
+  { src: "/publishing.jpg", alt: "Book Marketing and Publicity"  },
   { src: "/collegemarketing2.jpg", alt: "College Marketing" },
   { src: "/presscoverage.jpg", alt: "Press Coverage" },
   { src: "/retailmarketing.jpg", alt: "Retail Marketing" },
-  { src: "/bloggeroutreach.jpg", alt: "Blogger Outreach" },
-  { src: "/booktours.jpg", alt: "Book Tours" },
-  { src: "/amazon3.webp", alt: "Amazon Marketing Services (AMS) " },
-  { src: "/booklaunch.jpg", alt: "Book Launch" },
+  { src: "/bloggeroutreach.jpg", alt: "Blogger Outreach"},
+  { src: "/booktours.jpg", alt: "Book Tours"  },
+  { src: "/amazon3.webp", alt: "Amazon Marketing Services (AMS) "  },
+  { src: "/booklaunch.jpg", alt: "Book Launch"},
   { src: "/influencerengagement.jpg", alt: "Influencer Engagement" },
   { src: "/bookclub.jpg", alt: "Book Club Promotions" },
   { src: "/cinemaunbound.jpg", alt: "Cinema Unbound" },
