@@ -24,9 +24,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-200">
           <div className="flex space-x-4 mb-4 md:mb-0">
-            <a className="p-2 bg-black text-white rounded-full">
-              <Send size={20} />
-            </a>
+           
             <a className="p-2 bg-black text-white rounded-full" href="https://wa.me/971555378328?text=I%20am%20interested%20in%20the%20Premium%20Plan%20For%20HerMark.">
               <MessageCircle size={20} />
             </a>

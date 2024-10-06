@@ -16,6 +16,9 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "HerMark",
   description: "Making her mark in literature",
+  icons: {
+    icon: '/whitefeather.png', // Set your favicon here
+  },
 };
 
 export default function RootLayout({
@@ -24,6 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <>
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -31,5 +35,6 @@ export default function RootLayout({
         {children}
       </body>
     </html>
+    </>
   );
 }
