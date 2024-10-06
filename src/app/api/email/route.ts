@@ -31,7 +31,7 @@ const transporter = nodemailer.createTransport({
 
         const mailOptions = {
             from: `"HerMark Enquiry" <${process.env.GMAIL_USER}>`,
-            to: "aayushtirmanwar1234@gmail.com",
+            to: "anant.hermarkpress@gmail.com",
             subject: subject,
             html: emailContent,
           };

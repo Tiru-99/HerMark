@@ -18,7 +18,7 @@ export default function Frontcomp() {
 
       <div className="absolute bottom-[20%] left-4 md:left-20 w-full">
         <div className="text-4xl md:text-7xl font-thin text-white text-left md:text-left font-serif">
-          Making <span className={`${isHovered ? 'text-yellow-400' : 'text-white'} transition-all duration-300 ease-in-out`}>Her</span> Mark in <br />Literature
+          Making <span className={`${isHovered ? 'text-pink-400' : 'text-white'} transition-all duration-300 ease-in-out`}>Her</span> Mark in <br />Literature
         </div>
 
         <Link to='getstarted' smooth ={true} duration={500}><button
