@@ -18,10 +18,14 @@ export default function Home() {
       <div className='mt-24'>
         <Form></Form>
       </div>
-      <Masonry></Masonry>
+
+      <div className="-mt-96 sm:mt-0">
+        <Masonry></Masonry>
+      </div>
      
-        
+      <div className='-mt-96 sm:mt-0'>
         <AboutUs></AboutUs>
+      </div>
 
         <Footer></Footer>
       
