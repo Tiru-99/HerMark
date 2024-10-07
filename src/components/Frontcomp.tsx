@@ -32,8 +32,9 @@ export default function Frontcomp() {
           Making <span className={`${isHovered ? 'text-pink-400' : 'text-white'} transition-all duration-300 ease-in-out`}>Her</span> Mark in <br />Literature
         </div>
         
-        <Link to='getstarted' smooth={true} duration={500}>
+        <Link to='getstarted' href='#getStarted' smooth={true} duration={500}>
           <button
+            
             className="text-white border p-3 mt-6 md:mt-12 border-white text-lg md:text-2xl hover:bg-white hover:text-black transition-all duration-300 ease-in-out"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}

@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "Celebrating women authors",
     "Female literary empowerment"
   ],
-  
+  description:"Making her mark in literature",
   title:{
     default : "HerMark",
     template: `%s | HerMark`
