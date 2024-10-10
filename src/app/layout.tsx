@@ -2,51 +2,69 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
+  display: "swap",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+  display: "swap",
 });
 
+const baseUrl = "https://www.hermarkpress.com";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.hermarkpress.com/"),
+  metadataBase: new URL(baseUrl),
+  title: "HerMark | Empowering Women in Literature",
+  description: "HerMark is your premier destination for celebrating and empowering women authors. Join our community to discover exceptional female literary voices, access valuable resources, and connect with fellow writers.",
   keywords: [
-    "Making her mark in literature",
-    "Women in literature",
-    "Female authors",
-    "Empowering women writers",
-    "Women’s writing community",
+    "Women authors",
+    "Female writers",
+    "Literary community",
     "Women in publishing",
-    "Female literary voices",
-    "Promoting women authors",
-    "Women’s literary contributions",
-    "Empower women authors",
-    "Women’s literature platform",
-    "Women writers' network",
-    "Female storytelling",
-    "Support women in literature",
-    "Women in creative writing",
-    "Celebrating women authors",
-    "Female literary empowerment"
+    "Female storytellers",
+    "Women's literature",
+    "Author platform",
+    "Literary empowerment",
+    "Writing community",
+    "Author networking",
+    "Women writers network"
   ],
-  description:"Making her mark in literature",
-  title:{
-    default : "HerMark",
-    template: `%s | HerMark`
-  },
-  openGraph:{
+  openGraph: {
     type: "website",
-    description : "Making her mark in literature",
-    images :['']
+    locale: "en_US",
+    url: baseUrl,
+    siteName: "HerMark",
+    title: "HerMark | Empowering Women in Literature",
+    description: "Your premier destination for celebrating and empowering women authors. Discover exceptional female literary voices.",
+    images: [
+      {
+        url: `${baseUrl}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "HerMark - Empowering Women in Literature"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HerMark | Empowering Women in Literature",
+    description: "Your premier destination for celebrating and empowering women authors.",
+    images: [`${baseUrl}/twitter-image.jpg`],
+    creator: "@hermarkpress"
   },
   icons: {
-    icon: 'favicon.ico'
+    icon: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
+
+  alternates: {
+    canonical: baseUrl
   }
 };
 
@@ -56,14 +74,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
-    </>
   );
 }
